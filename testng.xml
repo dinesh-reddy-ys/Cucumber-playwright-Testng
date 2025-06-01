@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="CucumberSuite" verbose="1" parallel="false">
+
+    <!-- Define the Test -->
+    <test name="CucumberTest">
+        <classes>
+            <!-- Add the TestRunner class where Cucumber execution starts -->
+            <class name="runners.TestRunner" />
+        </classes>s
+    </test>
+
+</suite>

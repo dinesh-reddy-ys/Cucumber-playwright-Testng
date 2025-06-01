@@ -24,6 +24,7 @@ public class TestNGListener implements ITestListener {
     @Override
     public void onStart(ITestContext context) {
         // Test suite level setup (e.g., initializing resources, logging information, etc.)
+        System.out.println("Test Suite Started: " + context.getSuite().getName());
     }
 
     /**
@@ -36,6 +37,7 @@ public class TestNGListener implements ITestListener {
     @Override
     public void onFinish(ITestContext context) {
         // Test suite level cleanup (e.g., releasing resources, generating reports, etc.)
+        System.out.println("Test Suite Finished: " + context.getSuite().getName());
     }
 
     /**
@@ -49,6 +51,7 @@ public class TestNGListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
         // Handle test failures (e.g., logging, capturing diagnostics, notifying teams, etc.)
+        System.out.println("Test Failed: " + result.getName());
     }
     
     // Implement other methods as needed for additional event handling.
