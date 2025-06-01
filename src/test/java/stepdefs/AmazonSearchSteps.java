@@ -34,6 +34,8 @@ public class AmazonSearchSteps {
 
     @When("I filter results")
     public void filterResultsBy() {
-       amazonHomePage.setPriceRange();
+       amazonHomePage.enterMinPrice();
+       amazonHomePage.enterMaxPrice();
+       amazonHomePage.applyPriceFilter();
     }
 }

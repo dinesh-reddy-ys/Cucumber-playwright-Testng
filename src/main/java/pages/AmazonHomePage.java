@@ -36,16 +36,19 @@ public class AmazonHomePage extends BasePage {
     }
 
 
-    public void enterMinPrice(String minPrice) {
-        page.fill(PRICE_FILTER, minPrice);
+    public void enterMinPrice() {
+        Locator minSlider = page.locator("#p_36\\/range-slider_slider-item_lower-bound-slider");
+        minSlider.evaluate("el => el.value = 11"); // corresponding to ₹590
     }
 
-    public void enterMaxPrice(String maxPrice) {
-        page.fill(PRICE_FILTER, maxPrice);
+    public void enterMaxPrice() {
+        Locator maxSlider = page.locator("#p_36\\/range-slider_slider-item_upper-bound-slider");
+        maxSlider.evaluate("el => el.value = 78"); // corresponding to ₹59300
     }
 
     public void applyPriceFilter() {
-        page.click(SEARCH_BUTTON);
+        // Submit the form
+        page.locator("input[aria-label='Go - Submit price range']").click();
     }
 
     public void setPriceRange( ) {
