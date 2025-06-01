@@ -4,36 +4,29 @@ A robust test automation framework combining Playwright with Cucumber and TestNG
 
 ## Framework Structure
 project-root/
-├── pom.xml                   # Maven project configuration
-├── README.md                 # Project documentation
-
+├── pom.xml # Maven project configuration
+├── README.md # Project documentation
 ├── src/
-│   ├── main/
-│   │   └── java/
-│   │       ├── pages/                 # Page Object Model classes
-│   │       │   ├── BasePage.java
-│   │       │   └── LoginPage.java
-│   │       │
-│   │       └── utils/                 # Utility/helper classes
-│   │           └── TestContext.java
-│
-│   └── test/
-│       ├── java/
-│       │   ├── config/               # Test configuration and listeners
-│       │   │   └── TestNGListener.java
-│       │   │
-│       │   ├── hooks/                # Cucumber hooks (Before/After)
-│       │   │   └── Hooks.java
-│       │   │
-│       │   ├── stepdefs/             # Step Definitions
-│       │   │   └── LoginSteps.java
-│       │   │
-│       │   └── runners/              # TestNG Cucumber Runner
-│       │       └── TestRunner.java
-│       │
-│       └── resources/
-│           └── features/             # Cucumber Feature Files
-│               └── login.feature
+│ ├── main/
+│ │ └── java/
+│ │ ├── pages/ # Page Object Model classes
+│ │ │ ├── BasePage.java
+│ │ │ └── LoginPage.java
+│ │ ├── utils/ # Utility/helper classes
+│ │ │ └── TestContext.java
+│ └── test/
+│ ├── java/
+│ │ ├── config/ # Test configuration and listeners
+│ │ │ └── TestNGListener.java
+│ │ ├── hooks/ # Cucumber hooks (Before/After)
+│ │ │ └── Hooks.java
+│ │ ├── stepdefs/ # Step Definitions
+│ │ │ └── LoginSteps.java
+│ │ └── runners/ # TestNG Cucumber Runner
+│ │ └── TestRunner.java
+│ └── resources/
+│ └── features/ # Cucumber Feature Files
+│ └── login.feature
 
 ## Key Components
 
