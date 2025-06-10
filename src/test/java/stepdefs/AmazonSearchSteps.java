@@ -52,14 +52,7 @@ public class AmazonSearchSteps {
 
         // Wait for all products to load
         page.waitForLoadState();
-            try {
-                double price = Double.parseDouble("1000");
-                DBUtils.insertMobileDetails("samsung s24", "RAM 128", "Androdi 20", price);
-                // skip if price parsing fails
-                System.out.println("Added " + "samsung " + " to DB");
-            } catch (NumberFormatException e) {
-                throw new RuntimeException(e);
-            }
+
         }
 
 
