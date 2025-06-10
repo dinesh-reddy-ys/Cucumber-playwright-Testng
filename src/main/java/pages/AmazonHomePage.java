@@ -15,6 +15,7 @@ public class AmazonHomePage extends BasePage {
     private final String SORT_DROPDOWN = "div._10UF8M";
     private final String PRODUCT_CARDS = "div._1AtVbE";
     private final String PRODUCT_SPECS = "div._1UhVsV";
+    private final String SAMSUNG_FILTER = "//span[text()=\"Samsung\"]";
 
     public AmazonHomePage(Page page) {
         super(page);
@@ -51,17 +52,8 @@ public class AmazonHomePage extends BasePage {
         page.locator("input[aria-label='Go - Submit price range']").click();
     }
 
-    public void setPriceRange( ) {
-
-        // Update sliders if needed (mostly visual)
-        Locator minSlider = page.locator("#p_36\\/range-slider_slider-item_lower-bound-slider");
-       Locator maxSlider = page.locator("#p_36\\/range-slider_slider-item_upper-bound-slider");
-
-        // Interact with slider by setting value attributes
-        minSlider.evaluate("el => el.value = 11"); // corresponding to ₹590
-       maxSlider.evaluate("el => el.value = 78"); // corresponding to ₹59300
-
-        // Submit the form
-        page.locator("input[aria-label='Go - Submit price range']").click();
+    public void applySamsungBrandFilter() {
+        // Click the brand filter
+        page.locator(SAMSUNG_FILTER).click();
     }
 }

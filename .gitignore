@@ -36,3 +36,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+# Ignore sensitive database properties file
+application.properties
+

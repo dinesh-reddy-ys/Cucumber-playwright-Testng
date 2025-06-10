@@ -6,7 +6,7 @@
         <classes>
             <!-- Add the TestRunner class where Cucumber execution starts -->
             <class name="runners.TestRunner" />
-        </classes>s
+        </classes>
     </test>
 
 </suite>
